@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WhiteModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="FED_USERS">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USER_CAI" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="USER_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="USER_EMAIL" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STATUS" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DTM_CRT" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="USR_CRT" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DTM_UPD" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="USR_UPD" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MPM_PARAMETERS">
+    <Key>
+      <PropertyRef Name="PARAMETER_ID" />
+    </Key>
+    <Property Name="PARAMETER_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CATEGORY" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CODE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="PARENT_CATEGORY" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="DTM_CRT" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="USR_CRT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DTM_UPD" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="USR_UPD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="WhiteEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="FED_USERS" EntityType="Self.FED_USERS" />
+    <EntitySet Name="MPM_PARAMETERS" EntityType="Self.MPM_PARAMETERS" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WhiteModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="FED_USERS">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USER_CAI" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="USER_NAME" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="USER_EMAIL" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="STATUS" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="DTM_CRT" Type="datetime" Nullable="false" />
+    <Property Name="USR_CRT" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="DTM_UPD" Type="datetime" Nullable="false" />
+    <Property Name="USR_UPD" Type="varchar" MaxLength="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MPM_PARAMETERS">
+    <Key>
+      <PropertyRef Name="PARAMETER_ID" />
+    </Key>
+    <Property Name="PARAMETER_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CATEGORY" Type="varchar" MaxLength="15" />
+    <Property Name="CODE" Type="varchar" MaxLength="15" />
+    <Property Name="DESCRIPTION" Type="varchar" MaxLength="2000" />
+    <Property Name="PARENT_CATEGORY" Type="varchar" MaxLength="15" />
+    <Property Name="DTM_CRT" Type="datetime" Nullable="false" />
+    <Property Name="USR_CRT" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DTM_UPD" Type="datetime" Nullable="false" />
+    <Property Name="USR_UPD" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="WhiteModelStoreContainer">
+    <EntitySet Name="FED_USERS" EntityType="Self.FED_USERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MPM_PARAMETERS" EntityType="Self.MPM_PARAMETERS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,14 @@
+D:\Web App\WORKSPACE\EDS.WHITE\EDS.WHITE.Repository\obj\Debug\EDS.WHITE.Repository.csprojAssemblyReference.cache
+D:\Web App\WORKSPACE\EDS.WHITE\EDS.WHITE.Repository\obj\Debug\EDS.WHITE.Repository.csproj.CoreCompileInputs.cache
+D:\Web App\WORKSPACE\EDS.WHITE\EDS.WHITE.Repository\bin\Debug\EDS.WHITE.Repository.dll.config
+D:\Web App\WORKSPACE\EDS.WHITE\EDS.WHITE.Repository\bin\Debug\EDS.WHITE.Repository.dll
+D:\Web App\WORKSPACE\EDS.WHITE\EDS.WHITE.Repository\bin\Debug\EDS.WHITE.Repository.pdb
+D:\Web App\WORKSPACE\EDS.WHITE\EDS.WHITE.Repository\bin\Debug\EDS.WHITE.Entities.dll
+D:\Web App\WORKSPACE\EDS.WHITE\EDS.WHITE.Repository\bin\Debug\EntityFramework.dll
+D:\Web App\WORKSPACE\EDS.WHITE\EDS.WHITE.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\Web App\WORKSPACE\EDS.WHITE\EDS.WHITE.Repository\bin\Debug\EDS.WHITE.Entities.pdb
+D:\Web App\WORKSPACE\EDS.WHITE\EDS.WHITE.Repository\bin\Debug\EntityFramework.xml
+D:\Web App\WORKSPACE\EDS.WHITE\EDS.WHITE.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\Web App\WORKSPACE\EDS.WHITE\EDS.WHITE.Repository\obj\Debug\EDS.WHITE.Repository.csproj.CopyComplete
+D:\Web App\WORKSPACE\EDS.WHITE\EDS.WHITE.Repository\obj\Debug\EDS.WHITE.Repository.dll
+D:\Web App\WORKSPACE\EDS.WHITE\EDS.WHITE.Repository\obj\Debug\EDS.WHITE.Repository.pdb

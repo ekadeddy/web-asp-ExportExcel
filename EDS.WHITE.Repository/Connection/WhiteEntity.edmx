@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="WhiteModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="FED_USERS">
+          <Key>
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="USER_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USER_CAI" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="USER_NAME" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="USER_EMAIL" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="STATUS" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="DTM_CRT" Type="datetime" Nullable="false" />
+          <Property Name="USR_CRT" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="DTM_UPD" Type="datetime" Nullable="false" />
+          <Property Name="USR_UPD" Type="varchar" MaxLength="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MPM_PARAMETERS">
+          <Key>
+            <PropertyRef Name="PARAMETER_ID" />
+          </Key>
+          <Property Name="PARAMETER_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CATEGORY" Type="varchar" MaxLength="15" />
+          <Property Name="CODE" Type="varchar" MaxLength="15" />
+          <Property Name="DESCRIPTION" Type="varchar" MaxLength="2000" />
+          <Property Name="PARENT_CATEGORY" Type="varchar" MaxLength="15" />
+          <Property Name="DTM_CRT" Type="datetime" Nullable="false" />
+          <Property Name="USR_CRT" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="DTM_UPD" Type="datetime" Nullable="false" />
+          <Property Name="USR_UPD" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="WhiteModelStoreContainer">
+          <EntitySet Name="FED_USERS" EntityType="Self.FED_USERS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MPM_PARAMETERS" EntityType="Self.MPM_PARAMETERS" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WhiteModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="FED_USERS">
+          <Key>
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="USER_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USER_CAI" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USER_NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="USER_EMAIL" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="STATUS" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DTM_CRT" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="USR_CRT" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DTM_UPD" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="USR_UPD" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MPM_PARAMETERS">
+          <Key>
+            <PropertyRef Name="PARAMETER_ID" />
+          </Key>
+          <Property Name="PARAMETER_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CATEGORY" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CODE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="PARENT_CATEGORY" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="DTM_CRT" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="USR_CRT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DTM_UPD" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="USR_UPD" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="WhiteEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="FED_USERS" EntityType="Self.FED_USERS" />
+          <EntitySet Name="MPM_PARAMETERS" EntityType="Self.MPM_PARAMETERS" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WhiteModelStoreContainer" CdmEntityContainer="WhiteEntities">
+          <EntitySetMapping Name="FED_USERS">
+            <EntityTypeMapping TypeName="WhiteModel.FED_USERS">
+              <MappingFragment StoreEntitySet="FED_USERS">
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="USER_CAI" ColumnName="USER_CAI" />
+                <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+                <ScalarProperty Name="USER_EMAIL" ColumnName="USER_EMAIL" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="DTM_CRT" ColumnName="DTM_CRT" />
+                <ScalarProperty Name="USR_CRT" ColumnName="USR_CRT" />
+                <ScalarProperty Name="DTM_UPD" ColumnName="DTM_UPD" />
+                <ScalarProperty Name="USR_UPD" ColumnName="USR_UPD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MPM_PARAMETERS">
+            <EntityTypeMapping TypeName="WhiteModel.MPM_PARAMETERS">
+              <MappingFragment StoreEntitySet="MPM_PARAMETERS">
+                <ScalarProperty Name="PARAMETER_ID" ColumnName="PARAMETER_ID" />
+                <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="PARENT_CATEGORY" ColumnName="PARENT_CATEGORY" />
+                <ScalarProperty Name="DTM_CRT" ColumnName="DTM_CRT" />
+                <ScalarProperty Name="USR_CRT" ColumnName="USR_CRT" />
+                <ScalarProperty Name="DTM_UPD" ColumnName="DTM_UPD" />
+                <ScalarProperty Name="USR_UPD" ColumnName="USR_UPD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WhiteModelStoreContainer" CdmEntityContainer="WhiteEntities">
+    <EntitySetMapping Name="FED_USERS">
+      <EntityTypeMapping TypeName="WhiteModel.FED_USERS">
+        <MappingFragment StoreEntitySet="FED_USERS">
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USER_CAI" ColumnName="USER_CAI" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="USER_EMAIL" ColumnName="USER_EMAIL" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DTM_CRT" ColumnName="DTM_CRT" />
+          <ScalarProperty Name="USR_CRT" ColumnName="USR_CRT" />
+          <ScalarProperty Name="DTM_UPD" ColumnName="DTM_UPD" />
+          <ScalarProperty Name="USR_UPD" ColumnName="USR_UPD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MPM_PARAMETERS">
+      <EntityTypeMapping TypeName="WhiteModel.MPM_PARAMETERS">
+        <MappingFragment StoreEntitySet="MPM_PARAMETERS">
+          <ScalarProperty Name="PARAMETER_ID" ColumnName="PARAMETER_ID" />
+          <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="PARENT_CATEGORY" ColumnName="PARENT_CATEGORY" />
+          <ScalarProperty Name="DTM_CRT" ColumnName="DTM_CRT" />
+          <ScalarProperty Name="USR_CRT" ColumnName="USR_CRT" />
+          <ScalarProperty Name="DTM_UPD" ColumnName="DTM_UPD" />
+          <ScalarProperty Name="USR_UPD" ColumnName="USR_UPD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
